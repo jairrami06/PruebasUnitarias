@@ -36,21 +36,6 @@ public class EmployeeTest {
     }
 
     /**
-     * Test of cs method, of class Employee.
-     */
-    @Test
-    public void testCs() {
-        System.out.println("cs");
-        Employee instance = null;
-        float expResult = 0.0F;
-        float result = instance.cs();
-        assertEquals(expResult, result, 0);
-        assertEquals(Byte.MAX_VALUE, Byte.MAX_VALUE);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of CalculateYearBonus method, of class Employee.
      */
     @Test
