@@ -39,15 +39,27 @@ public class EmployeeTest {
      * Test of CalculateYearBonus method, of class Employee.
      */
     @Test
-    public void testCalculateYearBonusTipo() {
-        Employee instance1 = new Employee(1000, "EURO", (float) 0.05, EmployeeType.Manager);
-        Employee instance2 = new Employee(1000, "EURO", (float) 0.05, EmployeeType.Worker);
-        Employee instance3 = new Employee(1000, "EURO", (float) 0.05, EmployeeType.Supervisor);
-        assertEquals(1, instance1.CalculateYearBonus(), 0);
-        assertEquals(1,instance2.CalculateYearBonus(), 0);
-        assertEquals(1,instance3.CalculateYearBonus(), 0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testCalculateYearBonusWorker() {
+        Employee instance = new Employee(1000, "USD", (float) 0.05, EmployeeType.Worker);
+        assertEquals(386, instance.CalculateYearBonus(), 0);
     }
+    
+    @Test
+    public void testCalculateYearBonusManager() {
+        Employee instance = new Employee(2000, "USD", (float) 0.05, EmployeeType.Manager);
+        assertEquals(2386, instance.CalculateYearBonus(), 0);
+    }
+    
+    @Test
+    public void testCalculateYearSupervisor() {
+        Employee instance = new Employee(1500, "USD", (float) 0.05, EmployeeType.Supervisor);
+        assertEquals(1693, instance.CalculateYearBonus(), 0);
+    }
+    
+    @Test
+    public void testCalculateYearOtraMoneda() {
+        Employee instance = new Employee(1000, "EURO", (float) 0.05, EmployeeType.Supervisor);
+        assertEquals(1143, instance.CalculateYearBonus(), 0);
 
+    }
 }
