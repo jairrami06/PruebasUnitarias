@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class calculateSalaryTest {
     
     /**
-     * Test of cs method, of class Employee.
+     * Test of cs method, of class Employeee.
     */
     
     public void testUSDManager () {
